@@ -12,11 +12,24 @@ long long greatest_divisor(long long x, long long y);
 
     cin >> parties;
 
+    if (parties < 1 || parties > 1000)
+    {
+        cout << "Wrong input!\n";
+        return 1;
+    }
+
     long long votes[parties];
 
     for (int i = 0; i < parties; i++)
     {
         cin >> votes[i];
+
+        if (votes[i] < 1)
+        {
+            cout << "Wrong input!\n";
+        return 1;
+        }
+    
         result += votes[i];
     }
 

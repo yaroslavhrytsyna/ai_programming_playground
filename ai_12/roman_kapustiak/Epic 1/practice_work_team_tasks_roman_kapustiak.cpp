@@ -11,19 +11,40 @@ int main()
     double compoundInterest, totalAmount;
 
     printf("Enter your name: ");
-    scanf("%s", name);
+    if(!scanf("%s", name))
+    {   
+        printf("Wrong input!\n");
+        return 1;
+    }
 
-    printf("Enter the principal amount: ");
-    scanf("%lf", &principal);
+    printf("Enter the principal amount: ");    ;
+    if(!scanf("%lf", &principal))
+    {   
+        printf("Wrong input!\n");
+        return 1;
+    }
+
 
     printf("Enter the rate of interest (in percentage): ");
-    scanf("%lf", &rate);
+    if(!scanf("%lf", &rate))
+    {   
+        printf("Wrong input!\n");
+        return 1;
+    }    
 
-    printf("Enter the number of years: ");
-    scanf("%i", &years);
+    printf("Enter the number of years: ");    
+    if(!scanf("%i", &years))
+    {   
+        printf("Wrong input!\n");
+        return 1;
+    }  
 
     printf("Enter the number of times interest is compounded per year (e.g., 1 for annually, 4 for quarterly, 12 for monthly): ");
-    scanf("%i", &timesInterestIsCompounded);
+    if(!scanf("%i", &timesInterestIsCompounded))
+    {   
+        printf("Wrong input!\n");
+        return 1;
+    }  
 
     rate /= 100;
 
